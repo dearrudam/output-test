@@ -14,7 +14,6 @@ jobs:
         run: echo ${{steps.test1.outputs.TEST1}}
       - name: Setup output var2
         id: test2
-        run: |
-          echo "TEST2=first line\n second line\n third line" >> $GITHUB_OUTPUT
+        run: echo "TEST2=first line\n second line\n third line" >> $GITHUB_OUTPUT
       - name: Check output var2
         run: echo ${{steps.test2.outputs.TEST2}}
