@@ -1,7 +1,7 @@
 name: Output
 on: push
 jobs:
-  job1:
+  ouput:
     runs-on: ubuntu-latest
     steps:
       - name: Setup output var0
