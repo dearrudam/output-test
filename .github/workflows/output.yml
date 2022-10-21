@@ -34,3 +34,8 @@ jobs:
         run: echo -e "TEST3=first line\n second line\n third line" >> $GITHUB_OUTPUT
       - name: Check output var3
         run: echo ${{steps.test3.outputs.TEST3}}
+      - name: Setup output var4
+        id: test4
+        run: sh -c 'echo -e "TEST4=first line\n second line\n third line" >> $GITHUB_OUTPUT'
+      - name: Check output var4
+        run: echo ${{steps.test4.outputs.TEST4}}
