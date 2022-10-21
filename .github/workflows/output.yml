@@ -17,4 +17,4 @@ jobs:
         run: |
           echo "TEST2=first line\nsecond line\nthird line" >> $GITHUB_OUTPUT
       - name: Check output var2
-        run: echo ${{steps.test1.outputs.TEST2}}
+        run: echo ${{steps.test2.outputs.TEST2}}
