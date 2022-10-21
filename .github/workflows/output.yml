@@ -4,6 +4,18 @@ jobs:
   output:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup output var0
+        id: test0
+        run: |
+          MESSAGE=$(cat << EOF
+          first line
+          second line
+          third line
+          EOF
+          )
+          echo TEST=$MESSAGE >> $GITHUB_OUTPUT
+      - name: Check output var0
+        run: echo ${{steps.test0.outputs.TEST0}}
       - name: Setup output var1
         id: test1
         run: |
