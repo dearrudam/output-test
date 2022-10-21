@@ -13,7 +13,7 @@ jobs:
           third line
           EOF
           )
-          echo TEST=$MESSAGE >> $GITHUB_OUTPUT
+          echo TEST0=$MESSAGE >> $GITHUB_OUTPUT
       - name: Check output var0
         run: echo ${{steps.test0.outputs.TEST0}}
       - name: Setup output var1
