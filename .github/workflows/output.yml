@@ -1,7 +1,7 @@
 name: Output
 on: push
 jobs:
-  output:
+  job1:
     runs-on: ubuntu-latest
     steps:
       - name: Setup output var0
@@ -27,6 +27,9 @@ jobs:
       - name: Setup output var2
         id: test2
         run: echo "TEST2=first line\n second line\n third line" >> $GITHUB_OUTPUT
+      - name: Setup output varN
+        id: testN
+        run: echo -e "TEST2=first line\n second line\n third line" >> $GITHUB_OUTPUT
       - name: Check output var2
         run: echo ${{steps.test2.outputs.TEST2}}
       - name: Setup output var3
