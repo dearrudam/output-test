@@ -7,8 +7,8 @@ jobs:
       - name: Setup output var
         id: test1
         run: |
-          echo "TEST=first line
-          second line
+          echo "TEST=first line \
+          second line \
           third line" >> $GITHUB_OUTPUT
       - name: Check output var
         run: echo ${{steps.test1.outputs.TEST}}
