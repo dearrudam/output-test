@@ -4,11 +4,17 @@ jobs:
   output:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup output var
+      - name: Setup output var1
         id: test1
         run: |
-          echo "TEST=first line \
+          echo "TEST1=first line \
           second line \
           third line" >> $GITHUB_OUTPUT
-      - name: Check output var
-        run: echo ${{steps.test1.outputs.TEST}}
+      - name: Check output var1
+        run: echo ${{steps.test1.outputs.TEST1}}
+      - name: Setup output var2
+        id: test2
+        run: |
+          echo "TEST2=first line\nsecond line\nthird line" >> $GITHUB_OUTPUT
+      - name: Check output var2
+        run: echo ${{steps.test1.outputs.TEST2}}
